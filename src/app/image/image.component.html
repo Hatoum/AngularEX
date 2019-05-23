@@ -1,0 +1,60 @@
+
+<img [class.img] src="{{imgSrc}}">
+
+<p>*******************************</p>
+<img [class.img] [src]="imgSrc">
+
+<p>*******************************</p>
+
+<table>
+  <tr>
+    <th>Months</th>
+    <th>Saving</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>Febrauary</td>
+    <td>$80</td>
+  </tr>
+  <tr>
+    <td>Sum</td>
+    <td [attr.colspan]="col" > Sum $180</td>
+  </tr>
+</table>
+<h1 [class.green] = "isactive">Hello</h1>
+<h1 [style.color] = "isactive ?'green':'red'">Hello Sir</h1>
+<h1 [style.backgroundColor] = "isactive ?'green':'red'"> Mar7ba</h1>
+<h1 (click) = "login()">Login </h1>
+<input type="text" (keydown) ="logout($event)">
+<hr>
+<input type="text" (keydown) ="logout($event)">
+<hr>
+<input type="text" (keydown.a)="logout($event)">
+<hr>
+<input type="text" (keydown.control.a)="logout($event)">
+<hr>
+
+<input type="text" [(ngModel)]="inpuText">
+{{inpuText}}
+<hr>
+<input type="number" [(ngModel)]="a">
+<input type="number" [(ngModel)]="b">
+<button (click)=somme($event)>Somme</button>
+<button (click)=soustract($event)>Soustratct</button>
+<button (click)=multiply($event)>multiply</button>
+<button (click)=division($event)>division</button>
+
+<p>**************/formulaire/***************</p>
+<hr>
+<form [formGroup]="personne">
+  <div >
+      Name :<input type="text"   formControlName="username">
+     Email ;<input type="text"  formControlName="email">
+     Addresse : <input type="text"  formControlName="addresse">
+     <button (click)=register(personne)>Submit</button>
+  </div>
+</form>
+<br><br><br><br><br><br><br>

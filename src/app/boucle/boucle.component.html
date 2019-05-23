@@ -1,0 +1,12 @@
+<div *ngIf = "simpleIf">hello If</div>
+<p>**********************</p>
+<div *ngIf="ifBlock; else elseBlock">Content to render when condition is true.</div>
+<ng-template #elseBlock>Content to render when condition is false.</ng-template>
+<p>**********************</p>
+<div *ngFor="let item of client; index as i">{{item}}</div>
+<p>**********************</p>
+<div [ngSwitch]="switch1">
+  <div *ngSwitchCase="1">Ahmed</div>
+  <div *ngSwitchCase="2">Ali</div>
+  <div *ngSwitchCase="3">Khaled</div>
+ </div>
